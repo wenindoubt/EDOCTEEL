@@ -40,4 +40,4 @@ class Solution {
 // We visit each node exactly once.
 
 // Space complexity is O(w), where w is the width of the tree.
-// In this case, O(h) = O(n).
+// In this case, O(w) = O(n).
