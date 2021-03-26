@@ -9,26 +9,27 @@ class Solution {
         Queue<TreeNode> queue = new LinkedList<>();
         
         // enqueue the initial node
-        queue.add(root);
+        queue.offer(root);
         
         while (!queue.isEmpty()) {
             int queue_size = queue.size();
             List<Integer> nodes_per_level = new ArrayList<>();
             
+            // loop through each level
             for (int i = 0; i < queue_size; i++) {
-                //  poll() would throw an exception if the queue is empty
-                TreeNode current = queue.remove();
+                TreeNode current = queue.poll();
                 
                 nodes_per_level.add(current.val);
                 
                 if (current.left != null) {
-                    queue.add(current.left);
+                    queue.offer(current.left);
                 }
                 
                 if (current.right != null) {
-                    queue.add(current.right);
+                    queue.offer(current.right);
                 }
             }
+            // append each level's nodes to the overall result
             result.add(nodes_per_level);
         }
         
