@@ -6,7 +6,10 @@ class Solution {
             return 0; // tree does not exist; height is 0
         }
         
-        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        int left_height = maxDepth(root.left);
+        int right_height = maxDepth(root.right);
+        
+        return Math.max(left_height, right_height) + 1;
     }
 }
 
