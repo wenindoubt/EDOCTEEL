@@ -26,7 +26,7 @@ class Solution {
 // Time complexity is O(n + 1) where n is the number of elements we
 // loop through.
 
-// Space complexity is O(n * m) (k, v) where n is the number of elements
+// Space complexity is O(m * n) (k, v) where n is the number of elements
 // in the array and m is the complement (target). This assumes that there is 
 // potentially no complement match for the two sum and we store the
 // entire array of information.
